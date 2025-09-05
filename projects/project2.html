@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DO-YOUR TASK'S</title>
+    <link rel="stylesheet" href="s.css">
+</head>
+<body><p id="yours"></p>
+    <div id="content">
+        <input type="text" id="inputname" placeholder="YOUR-NAME"><br>
+        <button id="next">NEXT</button>
+    </div>
+    <div id="listcontent" style="display: none;">
+        <input type="text" id="listinput" placeholder="YOUR-TASKS">
+        <button id="listbtn">ADD</button>
+        <ul id="lists"></ul>
+    </div>
+</body>
+<script>
+    let inputname=document.getElementById('inputname');
+    let next=document.getElementById('next')
+    let content=document.getElementById('content');
+    let listcontent=document.getElementById('listcontent');
+
+    next.addEventListener('click',function(){
+        if(inputname.value.length<0){
+            alert('the value must be 1')
+        }
+        else if(inputname.value===''){
+            alert('must be 1')
+        }
+        else{
+            content.style.display='none';
+                let yours=document.getElementById('yours');
+                yours.innerHTML=`HELLO👋,  ${inputname.value}`;
+                listcontent.style.display='block';
+
+
+        }
+    })
+    let listbtn=document.getElementById('listbtn');
+    let lists=document.getElementById('lists');
+    let listinput=document.getElementById('listinput');
+    listbtn.addEventListener('click',function(){
+        if(listinput.value==='')return;
+        
+        let i=1;    
+             i=i+'';
+        let li=document.createElement('li');
+        li.innerHTML = `
+            <span onclick="toggleTask(this)" style="border-left:1px solid black;border-right:1px solid black;">  ${listinput.value}</span>
+            <button onclick="removeTask(this)">❌</button>
+        `;
+        lists.appendChild(li);
+        listinput.value='';
+    })
+
+    function toggleTask(task) {
+        task.parentElement.classList.toggle("completed");
+    }
+
+    function removeTask(button) {
+        button.parentElement.remove();
+    }
+     if(listinput.value.length > 2){
+            alert('max') 
+        }
+
+
+</script>
+</html>

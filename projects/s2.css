@@ -1,0 +1,110 @@
+@media  screen and (min-width:748px) {
+    #maindiv{
+        width: 400px;
+        height: 400px;
+        margin-top: 50px;
+        border: 1px solid black;
+        box-shadow:  0 0 3px black;
+        border-radius: 10px;
+        background: white;
+        margin-left: 550px;
+        margin-top: 160px;
+    }
+    #p1{
+        width: max-content;
+        font-size: 15px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 100;
+        font-variant: small-caps;
+        margin-top: 20px;
+        white-space: wrap;
+       margin-left: 100px;
+       position: fixed;
+        
+        
+    }
+    #q1,#q2,#q3,#q4,#q5,#q7{
+        position: fixed;
+        width: 380px;
+        height:250px;
+        box-shadow: 0 0 4px rgba(0,0,0,0.4);
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+        border-radius: 5px;
+        margin-left: 10px;
+        transition:1s;
+
+    }
+    #username,#age,#state,#school,#email{
+        margin-top: 80px;
+        width: 200px;
+        height: 35px;
+        border: none;
+        outline: none;
+        box-shadow: 0 0 2px black;
+        margin-left: 80px;
+    }
+    #n1,#n2,#n3,#n4,#n5{
+        width: 100px;
+        margin-top: 30px;
+        margin-left: 130px;
+        height: 30px;
+        background: rgb(55, 232, 108);
+        border: 0;border-radius: 5px;
+    }
+}
+@media  screen and (max-width:599px) {
+    #maindiv{
+        width: 400px;
+        height: 400px;
+        margin-top: 50px;
+        border: 1px solid black;
+        box-shadow:  0 0 3px black;
+        border-radius: 10px;
+        background: white;
+    }
+    #p1{
+        width: max-content;
+        font-size: 15px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 100;
+        font-variant: small-caps;
+        margin-top: 20px;
+        white-space: wrap;
+       margin-left: 100px;
+       position: fixed;
+        
+        
+    }
+    #q1,#q2,#q3,#q4,#q5,#q7{
+        position: fixed;
+        width: 380px;
+        height:250px;
+        box-shadow: 0 0 4px rgba(0,0,0,0.4);
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+        border-radius: 5px;
+        margin-left: 10px;
+        transition:1s;
+
+    }
+    #username,#age,#state,#school,#email{
+        margin-top: 80px;
+        width: 200px;
+        height: 35px;
+        border: none;
+        outline: none;
+        box-shadow: 0 0 2px black;
+        margin-left: 80px;
+    }
+    #n1,#n2,#n3,#n4,#n5{
+        width: 100px;
+        margin-top: 30px;
+        margin-left: 130px;
+        height: 30px;
+        background: rgb(55, 232, 108);
+        border: 0;border-radius: 5px;
+    }
+}

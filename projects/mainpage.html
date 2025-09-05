@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projects</title>
+    <link rel="stylesheet" href="s.css">
+</head>
+<style>
+    div{
+        width: 200px;
+        height: 200px;
+        margin: 50px;
+        box-shadow: inset 0 0 1px black;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        box-shadow:0 0 2px black;
+        transition: 500ms;
+        border-radius: 10px;
+        text-shadow: 0 0 2px rgb(9, 9, 9);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+</style>
+<body>
+    
+    <div id="project1" >
+        JS CALCULATOR
+    </div>
+    <div id="project2">
+        TO-DO LIST
+    </div>
+    <div id="project3">
+        USER FORMS
+    </div>
+    </body>
+<script>
+    let project1=document.getElementById('project1');
+    project1.addEventListener('click',function(){
+        window.location.href='project1.html';
+    })
+
+     let project2=document.getElementById('project2');
+    project2.addEventListener('click',function(){
+        window.location.href='project2.html';
+    })
+      let project3=document.getElementById('project3');
+    project3.addEventListener('click',function(){
+        window.location.href='project3.html';
+    })
+
+</script>
+</html>

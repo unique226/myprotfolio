@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <link rel="stylesheet" href="s.css">
+    <style>
+        #calculator{
+    width: 400px;
+    height: 630px;
+    border-radius: 4px;
+    box-shadow: inset 0 0 3px black;
+}
+#clcdisplay{
+    width: 98%;
+    height: 110px;
+    box-shadow: inset 0 0 3px black;
+    background-color: rgb(210, 234, 163);
+    margin-left: 1%;
+    position: relative;
+
+    border-top: 1px solid #000;
+}
+#buttons{
+    display:table-row;
+    width: 98%;
+    height: 480px;
+    margin-top: 20px;
+    margin-left: 1%;
+    border: 1px solid #000;
+    box-shadow:inset 0 0 3px #3d3c3c;
+    border-radius: 3px;
+    
+ 
+}
+button{
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    margin-left:50px;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+    z-index: 2;
+    background:transparent;
+}
+button:nth-child(1){
+    margin-left: 20px;
+    margin-top: 60px;
+    position: sticky;
+
+}
+button:nth-child(5){
+    margin-left: 20px;
+    margin-top: 60px;
+}
+button:nth-child(9){
+    margin-left: 20px;
+    margin-top: 60px;
+}
+button:nth-child(13){
+    margin-left: 20px;
+    margin-top: 60px;
+}
+
+#clcdisplay{
+    font-size: 21px;
+    text-align: end;
+    justify-content: end;
+    align-items: end;
+    white-space: wrap;
+    overflow: hidden;
+    display: flex;
+}
+button:hover{
+    border-radius: 5px;
+    border: 0;
+    font-size: 20px;
+    box-shadow: inset 0 0 3px rgb(11, 11, 11);
+}
+#clear{
+    font-size: 15px;
+ box-shadow: 0 0 0px;
+    color: red;    
+}
+button{
+    
+    position: sticky;
+}
+    </style>
+</head>
+<body>
+    <div id="calculator"><br>
+        <div id="clcdisplay"  ></div>
+        <div id="buttons">
+            <button onclick="append('9')" value="9">9</button>
+            <button onclick="append('8')">8</button>
+            <button onclick="append('7')">7</button>
+            <button onclick="append('+')">+</button>
+            
+             <button onclick="append('6')">6</button>
+            <button onclick="append('5')">5</button>
+            <button onclick="append('4')">4</button>
+            <button onclick="append('-')">-</button>
+            
+             <button onclick="append('3')">3</button>
+            <button onclick="append('2')">2</button>
+            <button onclick="append('1')">1</button>
+            <button onclick="append('0')">0</button>
+
+             <button onclick="append('*')">*</button>
+            <button onclick="append('/')">/</button>
+            <button onclick="append('%')">%</button>
+            <button id="equal">=</button>
+
+        </div>
+        <button style="width: max-content; height: 30px; margin-top: 0px;margin-left: 160px;  " id="clear">CLEAR</button>
+    </div>
+</body>
+<script>
+    var clcdisplay=document.getElementById('clcdisplay');
+    function append(val){
+        clcdisplay.innerHTML +=val;
+    }
+    let equal=document.getElementById('equal');
+    equal.addEventListener('click',function(){
+        try{
+             clcdisplay.innerHTML= eval(clcdisplay.innerHTML)
+            }
+        catch(e){
+             clcdisplay.innerHTML='ERROR';
+             setTimeout(() => {
+                clcdisplay.innerHTML='';
+             }, 1500);
+            }
+    });
+   let clear=document.getElementById('clear');
+   clear.addEventListener('click',function(){
+
+       clcdisplay.innerHTML='';
+   })
+</script>
+
+</html>
