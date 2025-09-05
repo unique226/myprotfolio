@@ -107,5 +107,8 @@ state.style.marginLeft='80px';
 school.style.marginLeft='80px';
 
 function download() {
-      
+      alert('processing..')
+      setTimeout(() => {
+        alert('sorry not yet to download this')
+      }, 2000);
     }
